@@ -17,9 +17,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "ui": "workspace:^",
+    "@babel/runtime": "^7.15.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "ui": "workspace:^",
     "vite-plugin-dts": "^2.3.0"
   },
   "devDependencies": {

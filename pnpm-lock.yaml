@@ -26,6 +26,9 @@ importers:
 
   apps/hero:
     dependencies:
+      '@babel/runtime':
+        specifier: ^7.15.3
+        version: 7.22.3
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -169,12 +172,6 @@ importers:
       '@types/jest':
         specifier: ^27.0.1
         version: 27.5.2
-      '@types/react':
-        specifier: ^17.0.19
-        version: 17.0.60
-      '@types/react-dom':
-        specifier: ^17.0.9
-        version: 17.0.20
       '@types/systemjs':
         specifier: ^6.1.1
         version: 6.13.1
@@ -185,17 +182,17 @@ importers:
         specifier: workspace:^
         version: link:../hero
       react:
-        specifier: ^17.0.2
-        version: 17.0.2
+        specifier: ^18.2.0
+        version: 18.2.0
       react-dom:
-        specifier: ^17.0.2
-        version: 17.0.2(react@17.0.2)
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
       single-spa:
         specifier: ^5.9.3
         version: 5.9.4
       single-spa-react:
         specifier: ^4.3.1
-        version: 4.6.1(@types/react-dom@17.0.20)(@types/react@17.0.60)(react@17.0.2)
+        version: 4.6.1(@types/react-dom@18.2.4)(@types/react@18.2.8)(react@18.2.0)
     devDependencies:
       '@babel/core':
         specifier: ^7.15.0
@@ -223,7 +220,13 @@ importers:
         version: 5.16.5
       '@testing-library/react':
         specifier: ^12.0.0
-        version: 12.1.5(react-dom@17.0.2)(react@17.0.2)
+        version: 12.1.5(react-dom@18.2.0)(react@18.2.0)
+      '@types/react':
+        specifier: ^18.2.8
+        version: 18.2.8
+      '@types/react-dom':
+        specifier: ^18.2.4
+        version: 18.2.4
       '@types/testing-library__jest-dom':
         specifier: ^5.14.1
         version: 5.14.6
@@ -2453,7 +2456,7 @@ packages:
       redent: 3.0.0
     dev: true
 
-  /@testing-library/react@12.1.5(react-dom@17.0.2)(react@17.0.2):
+  /@testing-library/react@12.1.5(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-OfTXCJUFgjd/digLUuPxa0+/3ZxsQmE7ub9kcbW/wi96Bh3o/p5vrETcBGfP17NWPGqeYYl5LTRpwyGoMC4ysg==}
     engines: {node: '>=12'}
     peerDependencies:
@@ -2463,8 +2466,8 @@ packages:
       '@babel/runtime': 7.22.3
       '@testing-library/dom': 8.20.0
       '@types/react-dom': 17.0.20
-      react: 17.0.2
-      react-dom: 17.0.2(react@17.0.2)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: true
 
   /@tootallnate/once@1.1.2:
@@ -2722,12 +2725,12 @@ packages:
     resolution: {integrity: sha512-4pzIjSxDueZZ90F52mU3aPoogkHIoSIDG+oQ+wQK7Cy2B9S+MvOqY0uEA/qawKz381qrEDkvpwyt8Bm31I8sbA==}
     dependencies:
       '@types/react': 17.0.60
+    dev: true
 
   /@types/react-dom@18.2.4:
     resolution: {integrity: sha512-G2mHoTMTL4yoydITgOGwWdWMVd8sNgyEP85xVmMKAPUBwQWm9wBPQUmvbeF4V3WBY1P7mmL4BkjQ0SqUpf1snw==}
     dependencies:
       '@types/react': 18.2.8
-    dev: true
 
   /@types/react@17.0.60:
     resolution: {integrity: sha512-pCH7bqWIfzHs3D+PDs3O/COCQJka+Kcw3RnO9rFA2zalqoXg7cNjJDh6mZ7oRtY1wmY4LVwDdAbA1F7Z8tv3BQ==}
@@ -2735,6 +2738,7 @@ packages:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.3
       csstype: 3.1.2
+    dev: true
 
   /@types/react@18.2.8:
     resolution: {integrity: sha512-lTyWUNrd8ntVkqycEEplasWy2OxNlShj3zqS0LuB1ENUGis5HodmhM7DtCoUGbxj3VW/WsGA0DUhpG6XrM7gPA==}
@@ -2742,7 +2746,6 @@ packages:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.3
       csstype: 3.1.2
-    dev: true
 
   /@types/retry@0.12.0:
     resolution: {integrity: sha512-wWKOClTTiizcZhXnPY4wikVAwmdYHp8q6DmC+EJUzAMsycb7HB32Kh9RN4+0gExjmPmZSAQjgURXIGATPegAvA==}
@@ -8072,16 +8075,6 @@ packages:
       strip-json-comments: 2.0.1
     dev: true
 
-  /react-dom@17.0.2(react@17.0.2):
-    resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==}
-    peerDependencies:
-      react: 17.0.2
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
-      react: 17.0.2
-      scheduler: 0.20.2
-
   /react-dom@18.2.0(react@18.2.0):
     resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
     peerDependencies:
@@ -8090,7 +8083,6 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
-    dev: false
 
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -8110,13 +8102,13 @@ packages:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
+    dev: true
 
   /react@18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
-    dev: false
 
   /readable-stream@2.3.8:
     resolution: {integrity: sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA==}
@@ -8391,17 +8383,10 @@ packages:
       xmlchars: 2.2.0
     dev: true
 
-  /scheduler@0.20.2:
-    resolution: {integrity: sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==}
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
-
   /scheduler@0.23.0:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
       loose-envify: 1.4.0
-    dev: false
 
   /schema-utils@2.7.0:
     resolution: {integrity: sha512-0ilKFI6QQF5nxDZLFn2dMjvc4hjg/Wkg7rHd3jK6/A4a1Hl9VFdQWvgB1UMGoU94pad1P/8N7fMcEnLnSiju8A==}
@@ -8627,17 +8612,17 @@ packages:
       single-spa: 5.9.4
     dev: false
 
-  /single-spa-react@4.6.1(@types/react-dom@17.0.20)(@types/react@17.0.60)(react@17.0.2):
+  /single-spa-react@4.6.1(@types/react-dom@18.2.4)(@types/react@18.2.8)(react@18.2.0):
     resolution: {integrity: sha512-19Yr1f6u9ix/wTI+OVLzX/KJ258xCyfe1Zpw7NKoI02QWBLx5B9l9XmBx9gqVtkrgP5ARR0Wr3ztY7EN8V1DAA==}
     peerDependencies:
       '@types/react': '*'
       '@types/react-dom': '*'
       react: '*'
     dependencies:
-      '@types/react': 17.0.60
-      '@types/react-dom': 17.0.20
+      '@types/react': 18.2.8
+      '@types/react-dom': 18.2.4
       browserslist-config-single-spa: 1.0.1
-      react: 17.0.2
+      react: 18.2.0
     dev: false
 
   /single-spa@5.9.4:
