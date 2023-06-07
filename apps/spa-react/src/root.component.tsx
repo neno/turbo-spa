@@ -1,4 +1,4 @@
-import {Hero} from "@myorg/hero/src/Hero";
+import {Hero} from "@myorg/hero";
 
 export default function Root(props) {
   return <section>
