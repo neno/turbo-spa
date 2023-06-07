@@ -169,6 +169,9 @@ importers:
 
   apps/spa-react:
     dependencies:
+      '@josip/hero':
+        specifier: workspace:^
+        version: link:../hero
       '@types/jest':
         specifier: ^27.0.1
         version: 27.5.2
@@ -178,9 +181,6 @@ importers:
       '@types/webpack-env':
         specifier: ^1.16.2
         version: 1.18.1
-      hero:
-        specifier: workspace:^
-        version: link:../hero
       react:
         specifier: ^18.2.0
         version: 18.2.0

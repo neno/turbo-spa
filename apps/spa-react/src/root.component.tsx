@@ -1,4 +1,4 @@
-import { Hero } from 'hero';
+import { Hero } from '@josip/hero';
 
 export default function Root(props) {
   return (
