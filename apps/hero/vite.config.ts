@@ -18,7 +18,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'hero',
-      formats: ['es', 'umd', 'cjs'],
+      formats: ['es'],
       fileName: (format) => `hero.${format}.js`
     },
     commonjsOptions: {
