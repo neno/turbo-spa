@@ -5,8 +5,7 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/hero.es.js",
-      "require": "./dist/hero.umd.js"
+      "import": "./dist/hero.es.js"
     }
   },
   "types": "./dist/index.d.ts",
