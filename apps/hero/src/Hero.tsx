@@ -10,7 +10,7 @@ export const Hero = ({ name }: HeroProps) => {
   };
   return (
     <div>
-      <Header text='My Hero Component' />
+      <Header text='My Hero Component updated to nev version!' />
       <Button handleClick={showAlert}>Click Me!</Button>
     </div>
   );
