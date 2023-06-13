@@ -26,6 +26,6 @@
     "storybook": "^7.0.20"
   },
   "dependencies": {
-    "@josip/hero": "workspace:^0.0.0"
+    "@nenoweb/hero": "workspace:^0.2.3"
   }
 }

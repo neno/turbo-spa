@@ -1,5 +1,17 @@
 # @turbo-spa/hero
 
+## 0.2.3
+
+### Patch Changes
+
+- Remove module field
+
+## 0.2.2
+
+### Patch Changes
+
+- Testing export
+
 ## 0.2.1
 
 ### Patch Changes
