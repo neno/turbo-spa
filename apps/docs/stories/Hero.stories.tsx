@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {Hero} from "@josip/hero";
+import {Hero} from "@nenoweb/hero";
+
 
 
 const meta: Meta<typeof Hero> = {
