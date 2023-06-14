@@ -1,6 +1,6 @@
 {
   "name": "@nenoweb/hero",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "type": "module",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -19,9 +19,9 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.15.3",
+    "@nenoweb/ui": "workspace:^0.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "ui": "workspace:^",
     "vite-plugin-dts": "^2.3.0"
   },
   "devDependencies": {

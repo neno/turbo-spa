@@ -1,4 +1,4 @@
-import {Button, Header} from "ui";
+import {Button, Header} from "@nenoweb/ui";
 
 export interface HeroProps {
   name: string;
