@@ -21,7 +21,7 @@ importers:
 
   apps/docs:
     specifiers:
-      '@nenoweb/hero': workspace:^0.2.3
+      '@nenoweb/hero': workspace:^0.2.4
       '@storybook/addon-essentials': ^7.0.20
       '@storybook/addon-interactions': ^7.0.20
       '@storybook/addon-links': ^7.0.20
@@ -51,6 +51,7 @@ importers:
   apps/hero:
     specifiers:
       '@babel/runtime': ^7.15.3
+      '@nenoweb/ui': workspace:^0.1.0
       '@types/react': ^18.0.37
       '@types/react-dom': ^18.0.11
       '@typescript-eslint/eslint-plugin': ^5.59.0
@@ -62,14 +63,13 @@ importers:
       react: ^18.2.0
       react-dom: ^18.2.0
       typescript: ^5.0.2
-      ui: workspace:^
       vite: ^4.3.9
       vite-plugin-dts: ^2.3.0
     dependencies:
       '@babel/runtime': 7.22.3
+      '@nenoweb/ui': link:../../packages/ui
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      ui: link:../../packages/ui
       vite-plugin-dts: 2.3.0_vite@4.3.9
     devDependencies:
       '@types/react': 18.2.8

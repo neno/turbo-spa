@@ -1,6 +1,6 @@
 {
-  "name": "ui",
-  "version": "0.0.0",
+  "name": "@nenoweb/ui",
+  "version": "0.1.0",
   "main": "./index.tsx",
   "types": "./index.tsx",
   "license": "MIT",
@@ -16,5 +16,8 @@
     "react": "^17.0.2",
     "tsconfig": "workspace:*",
     "typescript": "^4.5.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

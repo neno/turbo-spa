@@ -1,5 +1,11 @@
 # @turbo-spa/hero
 
+## 0.2.4
+
+### Patch Changes
+
+- ui added as npm package
+
 ## 0.2.3
 
 ### Patch Changes
