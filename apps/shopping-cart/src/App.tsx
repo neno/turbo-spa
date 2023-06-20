@@ -1,16 +1,15 @@
+// App.tsx
 import React from 'react';
 import './App.css';
 import { useCart } from '@nenoweb/store';
+import { Cart } from "./components/Cart";
 
 function App() {
   const { cartItems, addToCart, removeFromCart } = useCart();
 
-  console.log(cartItems);
-
   return (
     <div>
-      <pre>{JSON.stringify(cartItems, null, 2)}</pre>
-      {/* The rest of your component logic goes here */}
+      <Cart items={cartItems} />
     </div>
   );
 }

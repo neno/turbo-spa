@@ -1,10 +1,11 @@
 import { FC } from 'react';
-import { removeFromCart, CartItem as CartItemType } from '@nenoweb/store';
+import {CartItem as CartItemType, useCart} from '@nenoweb/store';
 
 export const CartItem: FC<CartItemType> = ({
   product: { id, title, price, category, image },
   quantity,
 }) => {
+  const { removeFromCart } = useCart();
   return (
     <li key={id} className='flex py-6'>
       <div className='h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200'>
