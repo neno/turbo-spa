@@ -1,0 +1,26 @@
+.cart {
+    pointer-events: auto;
+    max-width: 28rem;
+}
+
+.cartHeading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartFooter {
+    border-top: 1px solid gray;
+}
+
+.cartSubtotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.cartSubtotalNote {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
