@@ -1,4 +1,4 @@
-import { atom, useAtom } from 'jotai';
+import { atom, useAtom, useAtomValue } from 'jotai';
 import { productItems as products } from '../data/data.json';
 
 export interface Product {
@@ -43,9 +43,22 @@ export function useCart() {
     setCartItems(cartItems.filter(({ product }) => product.id !== productId));
   };
 
+  const cartItemsQuantityAtom = atom((get) => {
+    const cartItems = get(cartAtom);
+    const totalQuantity = cartItems.reduce(
+      (acc, { quantity }) => acc + quantity,
+      0
+    );
+  
+    return totalQuantity;
+  });
+  
+  const cartItemsQuantity = useAtomValue(cartItemsQuantityAtom);
+
   return {
     cartItems,
     addToCart,
     removeFromCart,
+    cartItemsQuantity
   };
 }
