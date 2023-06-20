@@ -1,5 +1,6 @@
-import './App.css'
-import {Cart} from "./components/Cart";
+import './App.css';
+import { Cart } from './components/Cart';
+import { cartItems } from '@nenoweb/store';
 
 const products = [
   {
@@ -10,7 +11,7 @@ const products = [
     image: {
       src: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
       alt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
-    }
+    },
   },
   {
     id: 2,
@@ -20,17 +21,20 @@ const products = [
     image: {
       src: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
       alt: 'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
-    }
-  }
-]
+    },
+  },
+];
 
 function App() {
+  console.log(cartItems);
+
+  return <h1>Hello from Shopping Cart</h1>;
 
   return (
     <>
       <Cart items={products} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
