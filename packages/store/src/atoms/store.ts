@@ -1,5 +1,6 @@
 import { atom, useAtom, useAtomValue } from 'jotai';
 import { productItems as products } from '../data/data.json';
+import exp from 'constants';
 
 export interface Product {
   id: number;
@@ -59,6 +60,12 @@ export function useCart() {
     cartItems,
     addToCart,
     removeFromCart,
-    cartItemsQuantity
+    cartItemsQuantity,
   };
+}
+
+export function useProducts() {
+  return {
+    products
+  }
 }
