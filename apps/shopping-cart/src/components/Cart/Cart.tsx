@@ -5,7 +5,6 @@ import {CartHeading} from "../CartHeading/CartHeading.tsx";
 import {CartFooter} from "../CartFooter/CartFooter.tsx";
 
 
-
 export const Cart = ({ items }) => {
   const [open, setOpen] = useState(true);
   const closeDialog = () => { setOpen(false) }

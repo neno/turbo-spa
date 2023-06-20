@@ -206,6 +206,7 @@ importers:
     specifiers:
       '@types/jest': ^26.0.22
       '@types/node': ^18.11.9
+      '@types/react': ^18.2.13
       eslint: ^7.32.0
       eslint-config-custom: workspace:*
       jotai: ^2.2.1
@@ -217,6 +218,7 @@ importers:
     devDependencies:
       '@types/jest': 26.0.24
       '@types/node': 18.16.18
+      '@types/react': 18.2.13
       eslint: 7.32.0
       eslint-config-custom: link:../eslint-config-custom
       tsconfig: link:../tsconfig
@@ -4835,6 +4837,14 @@ packages:
     resolution: {integrity: sha512-G2mHoTMTL4yoydITgOGwWdWMVd8sNgyEP85xVmMKAPUBwQWm9wBPQUmvbeF4V3WBY1P7mmL4BkjQ0SqUpf1snw==}
     dependencies:
       '@types/react': 18.2.8
+    dev: true
+
+  /@types/react/18.2.13:
+    resolution: {integrity: sha512-vJ+zElvi/Zn9cVXB5slX2xL8PZodPCwPRDpittQdw43JR2AJ5k3vKdgJJyneV/cYgIbLQUwXa9JVDvUZXGba+Q==}
+    dependencies:
+      '@types/prop-types': 15.7.5
+      '@types/scheduler': 0.16.3
+      csstype: 3.1.2
     dev: true
 
   /@types/react/18.2.8:

@@ -1,8 +1,10 @@
 import styles from './ProductCard.module.css';
 import {FC} from "react";
 import {CartItem} from "@nenoweb/store";
+import {AddToCart} from "../AddToCart";
 
-export const ProductCard : FC<CartItem> = ({ id, image, title, price }) => {
+export const ProductCard : FC<CartItem> = ({ product }) => {
+  const { id, image, title, price } = product;
   return (<div className={styles.card}>
     <div className={styles.cardImage}>
       <img
@@ -16,5 +18,6 @@ export const ProductCard : FC<CartItem> = ({ id, image, title, price }) => {
       </h3>
       <p className={styles.cardPrice}>{price}</p>
     </div>
+    <AddToCart product={product} />
   </div>)
 };

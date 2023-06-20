@@ -1,5 +1,6 @@
 import { atom, useAtom, useAtomValue } from 'jotai';
 import { productItems as products } from '../data/data.json';
+import {useCallback} from "react";
 
 export interface Product {
   id: number;
@@ -32,27 +33,27 @@ const cartAtom = atom<CartItem[]>([
   },
 ]);
 
+const cartItemsQuantityAtom = atom((get) => {
+  const cartItems = get(cartAtom);
+  const totalQuantity = cartItems.reduce(
+    (acc, { quantity }) => acc + quantity,
+    0
+  );
+
+  return totalQuantity;
+});
+
 export function useCart() {
   const [cartItems, setCartItems] = useAtom(cartAtom);
 
-  const addToCart = (product: Product, quantity: number) => {
-    setCartItems([...cartItems, { product, quantity }]);
-  };
-
   const removeFromCart = (productId: number) => {
-    setCartItems(cartItems.filter(({ product }) => product.id !== productId));
+    setCartItems((prevCartItems) => prevCartItems.filter(({ product }) => product.id !== productId));
   };
 
-  const cartItemsQuantityAtom = atom((get) => {
-    const cartItems = get(cartAtom);
-    const totalQuantity = cartItems.reduce(
-      (acc, { quantity }) => acc + quantity,
-      0
-    );
-  
-    return totalQuantity;
-  });
-  
+  const addToCart = (product: any, quantity: any) => {
+    setCartItems((prevCartItems) => [...prevCartItems, { product, quantity }]);
+  };
+
   const cartItemsQuantity = useAtomValue(cartItemsQuantityAtom);
 
   return {
