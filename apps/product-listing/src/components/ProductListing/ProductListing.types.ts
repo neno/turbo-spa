@@ -1,5 +1,5 @@
-import {IProductCardProps} from "../ProductCard";
+import {CartItem} from "@nenoweb/store";
 
 export interface IProductListingProps {
-  products: IProductCardProps[]
+  products: CartItem[]
 }

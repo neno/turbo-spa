@@ -1,14 +1,13 @@
 import styles from './ProductCard.module.css';
-import {IProductCardProps} from "./ProductCard.types.js";
 import {FC} from "react";
-import {AddToCart} from "../AddToCart";
+import {CartItem} from "@nenoweb/store";
 
-export const ProductCard : FC<IProductCardProps> = ({ id, image, title, price }) => {
+export const ProductCard : FC<CartItem> = ({ id, image, title, price }) => {
   return (<div className={styles.card}>
     <div className={styles.cardImage}>
       <img
-        src={image.src}
-        alt={image.alt}
+        src={image}
+        alt={title}
       />
     </div>
     <div className={styles.cardHeading}>
@@ -17,8 +16,5 @@ export const ProductCard : FC<IProductCardProps> = ({ id, image, title, price })
       </h3>
       <p className={styles.cardPrice}>{price}</p>
     </div>
-    <AddToCart id={id} />
   </div>)
 };
-
-export type { IProductCardProps };
