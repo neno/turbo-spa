@@ -1,5 +1,6 @@
 import './App.css'
 import {ProductCard} from "./components/ProductCard";
+import {ProductListing} from "./components/ProductListing";
 
 const products = [
   {
@@ -16,11 +17,7 @@ const products = [
 function App() {
   return (
     <>
-      <div className="grid">
-        {products.map((product) => (
-          <ProductCard key={product.id} {...product} />
-        ))}
-      </div>
+      <ProductListing products={products} />
     </>
   )
 }
