@@ -1,39 +1,17 @@
+import React from 'react';
 import './App.css';
-import { Cart } from './components/Cart';
-import { cartItems } from '@nenoweb/store';
-
-const products = [
-  {
-    id: 1,
-    name: 'Throwback Hip Bag',
-    price: '$90.00',
-    quantity: 1,
-    image: {
-      src: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
-      alt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
-    },
-  },
-  {
-    id: 2,
-    name: 'Medium Stuff Satchel',
-    price: '$32.00',
-    quantity: 1,
-    image: {
-      src: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
-      alt: 'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
-    },
-  },
-];
+import { useCart } from '@nenoweb/store';
 
 function App() {
+  const { cartItems, addToCart, removeFromCart } = useCart();
+
   console.log(cartItems);
 
-  return <h1>Hello from Shopping Cart</h1>;
-
   return (
-    <>
-      <Cart items={products} />
-    </>
+    <div>
+      <pre>{JSON.stringify(cartItems, null, 2)}</pre>
+      {/* The rest of your component logic goes here */}
+    </div>
   );
 }
 
