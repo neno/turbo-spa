@@ -1,6 +1,8 @@
 import { useCart } from '@nenoweb/store';
+import {CartFooterProps} from "./CartFooter.types";
+import {FC} from "react";
 
-export const CartFooter = ({ closeDialog }) => {
+export const CartFooter: FC<CartFooterProps> = ({ onContinueClick }) => {
   const { cartItemsQuantity } = useCart();
   return (
     <div className='border-t border-gray-200 px-4 py-6 sm:px-6'>
@@ -26,7 +28,7 @@ export const CartFooter = ({ closeDialog }) => {
           <button
             type='button'
             className='font-medium text-indigo-600 hover:text-indigo-500'
-            onClick={closeDialog}
+            onClick={onContinueClick}
           >
             Continue Shopping
             <span aria-hidden='true'> &rarr;</span>

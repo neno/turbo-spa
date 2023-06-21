@@ -1,11 +1,8 @@
-// App.tsx
-import React from 'react';
-import './App.css';
 import { useCart } from '@nenoweb/store';
 import { Cart } from "./components/Cart";
 
 function App() {
-  const { cartItems, addToCart, removeFromCart } = useCart();
+  const { cartItems } = useCart();
 
   return (
     <div>

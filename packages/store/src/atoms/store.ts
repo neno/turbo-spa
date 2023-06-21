@@ -1,6 +1,5 @@
 import { atom, useAtom, useAtomValue } from 'jotai';
 import { productItems as products } from '../data/data.json';
-import {useCallback} from "react";
 
 export interface Product {
   id: number;

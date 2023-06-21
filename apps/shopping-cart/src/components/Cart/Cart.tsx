@@ -1,11 +1,13 @@
-import { Fragment, useState } from 'react'
+import {FC, Fragment, useState} from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import {CartListing} from "../CartListing";
-import {CartHeading} from "../CartHeading/CartHeading.tsx";
-import {CartFooter} from "../CartFooter/CartFooter.tsx";
+import {CartHeading} from "../CartHeading/CartHeading";
+import {CartFooter} from "../CartFooter/CartFooter";
+import {CartProps} from "./Cart.types";
+import '../../index.css';
 
 
-export const Cart = ({ items }) => {
+export const Cart : FC<CartProps> = ({ items }) => {
   const [open, setOpen] = useState(true);
   const closeDialog = () => { setOpen(false) }
 
@@ -39,10 +41,10 @@ export const Cart = ({ items }) => {
                 <Dialog.Panel className="pointer-events-auto w-screen max-w-md">
                   <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
                     <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
-                      <CartHeading closeDialog={closeDialog} />
+                      <CartHeading onCloseClick={closeDialog} />
                       <CartListing items={items} />
                     </div>
-                    <CartFooter closeDialog={closeDialog} />
+                    <CartFooter onContinueClick={closeDialog} />
                   </div>
                 </Dialog.Panel>
               </Transition.Child>

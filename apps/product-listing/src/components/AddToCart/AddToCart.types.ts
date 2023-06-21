@@ -1,3 +1,5 @@
+import {Product} from "@nenoweb/store";
+
 export interface IAddToCartProps {
-  id: number
+  product: Product;
 }

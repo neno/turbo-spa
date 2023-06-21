@@ -1,8 +1,20 @@
 {
-  "name": "shopping-cart",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@nenoweb/shopping-cart",
+  "version": "0.0.1",
   "type": "module",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/shopping-cart.es.js"
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
+  "files": [
+    "dist/**"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -14,7 +26,8 @@
     "@heroicons/react": "^2.0.18",
     "@nenoweb/store": "workspace:^",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "vite-plugin-dts": "^2.3.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
@@ -30,5 +43,8 @@
     "tailwindcss": "^3.3.2",
     "typescript": "^5.0.2",
     "vite": "^4.3.9"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
